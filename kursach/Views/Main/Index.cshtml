@@ -1,0 +1,31 @@
+﻿@*page
+	@model IndexModel*@
+@{
+	ViewData["Title"] = "Home page";
+}
+
+
+
+@using (Html.BeginForm("OnPost", "Main", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+	<div class="text-center">
+		<h1 class="display-4">Welcome</h1>
+		<label><input type="radio" name="language" id="language1" value="English" checked>English</label>
+		<label><input type="radio" name="language" id="language2" value="Русский">Русский</label>
+		<label><input type="radio" name="encryption" id="encryption" value="encryption" checked>Зашифровать</label>
+		<label><input type="radio" name="encryption" id="decryption" value="decryption">Дешифровать</label>
+	</div>
+	<textarea name="text"></textarea>
+	<textarea name="key"></textarea>
+
+	<input type="submit" value="Continue"></input>
+	<input type="file" name="fileTxt" accept="text/plain,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></input>
+}
+
+
+@using (Html.BeginForm("Download", "Main", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+	<textarea name="resultText">@ViewBag.text</textarea>
+	<input type="submit" value="Download"></input>
+}
+
