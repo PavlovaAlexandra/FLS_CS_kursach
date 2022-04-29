@@ -9,23 +9,45 @@
 @using (Html.BeginForm("OnPost", "Main", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
 	<div class="text-center">
-		<h1 class="display-4">Welcome</h1>
+		<h1 class="display-4">Шифр Виженера</h1>
+
+		<label>Калькулятор шифрует входной текст на русском языке шифром Виженера. Неалфавитные символы (пробелы, знаки препинания, цифры) — не преобразуются.</label>
+
 		<label><input type="radio" name="language" id="language1" value="English" checked>English</label>
+		<pr />
 		<label><input type="radio" name="language" id="language2" value="Русский">Русский</label>
+		<br />
 		<label><input type="radio" name="encryption" id="encryption" value="encryption" checked>Зашифровать</label>
 		<label><input type="radio" name="encryption" id="decryption" value="decryption">Дешифровать</label>
 	</div>
-	<textarea name="text"></textarea>
-	<textarea name="key"></textarea>
 
-	<input type="submit" value="Continue"></input>
-	<input type="file" name="fileTxt" accept="text/plain,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></input>
+	<h4>Текст</h4>
+	<div style="width:100%;">
+		<textarea name="text" style="width:100%;"></textarea>
+
+		<br />
+		<input type="file" name="fileTxt" accept="text/plain,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></input>
+
+		<h4>Ключ</h4>
+		<textarea name="key" style="width:100%;"></textarea>
+		<br />
+		<input type="submit" value="Continue"></input>
+	</div>
+
+
 }
 
 
 @using (Html.BeginForm("Download", "Main", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-	<textarea name="resultText">@ViewBag.text</textarea>
+	<br />
+	<h1>Результат</h1>
+	<div style="width:100%;">
+		<textarea name="resultText" style="width:100%;">@ViewBag.text</textarea>
+	</div>
+	<br />
+	<br />
+	<h4>Загрузить результат</h4>
 	<input type="submit" value="Download"></input>
 }
 
