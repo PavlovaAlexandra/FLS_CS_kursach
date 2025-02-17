@@ -36,18 +36,3 @@ To run the application locally, execute the following command:
    dotnet run
 ```
 Or, run the project from Visual Studio by pressing `F5`.
-
-## Project Structure
-```
-FLS_CS_kursach/
-│-- kursach.sln                    # Solution file
-│-- kursach/
-│   ├── Program.cs                 # Main entry point
-│   ├── Startup.cs                 # Configuration and services
-│   ├── appsettings.json           # Configuration settings
-│   ├── Controllers/
-│   │   ├── MainController.cs      # Main controller logic
-│   ├── Properties/
-│   │   ├── launchSettings.json    # Debugging configuration
-│   ├── kursach.csproj             # Project file
-```
