@@ -16,7 +16,7 @@ Before running this project, make sure you have the following installed:
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repository/FLS_CS_kursach.git
+   git clone https://github.com/PavlovaAlexandra/FLS_CS_kursach.git
    ```
 2. Navigate to the project folder:
    ```sh
